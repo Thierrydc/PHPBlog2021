@@ -18,7 +18,7 @@ class CommentDAO extends DAO
         $result = $this->createQuery($sql)->fetchAll(\PDO::FETCH_ASSOC);
 
         foreach ($result as $row) {
-            $row['created_at'] = new \DateTime($row['created_at']);
+            $row['createdAt'] = new \DateTime($row['created_at']);
             $comments[] = $this->buildComment($row);
         }
 

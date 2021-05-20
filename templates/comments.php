@@ -48,7 +48,7 @@
                 </div>
                 <div class="media-right">
                     <small>
-                        <p>Crée le : <?php echo date_format($comment->getCreated_at(), 'd.m.Y à H:i:s'); ?>
+                        <p>Crée le : <?php echo date_format($comment->getCreatedAt(), 'd.m.Y à H:i:s'); ?>
                         </p>
                     </small>
                 </div>

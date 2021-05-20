@@ -30,7 +30,7 @@ class Comment
      *
      * @var DateTime
      */
-    private $created_at;
+    private $createdAt;
 
     //! Méthodes magiques et de construction
 
@@ -120,9 +120,9 @@ class Comment
      *
      * @return datetime
      */
-    public function getCreated_at()
+    public function getCreatedAt()
     {
-        return $this->created_at;
+        return $this->createdAt;
     }
 
     /**
@@ -132,8 +132,8 @@ class Comment
      *
      * @return self
      */
-    public function setCreated_at(\datetime $created_at)
+    public function setCreatedAt(\datetime $createdAt)
     {
-        $this->created_at = $created_at;
+        $this->createdAt = $createdAt;
     }
 }
