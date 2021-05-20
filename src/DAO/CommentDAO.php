@@ -17,14 +17,11 @@ class CommentDAO extends DAO
         $comments = [];
 
         $sql = 'SELECT * FROM comments ORDER BY created_at DESC';
-        $result = $this->createQuery($sql)->fetchAll();
+        $result = $this->createQuery($sql)->fetchAll(\PDO::FETCH_ASSOC);
 
         foreach ($result as $row) {
-            if (isset($row['created_at'])) {
-                $row['created_at'] = strtotime($row['created_at']);
-            }
-
             $id = $row['id'];
+            $row['created_at'] = new \DateTime($row['created_at']);
             $comments[$id] = $this->buildComment($row);
         }
 

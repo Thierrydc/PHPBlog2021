@@ -27,36 +27,33 @@
         </div>
     </section>
     <?php
+
     foreach ($comments as $comment) {
         ?>
-    <article class="media">
-        <figure class="media-left mt-3">
-            <p class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-            </p>
-        </figure>
-        <div class="media-content">
-            <div class="content">
-                <p>
-                <h2><?php echo $comment->getAuthor(); ?></h2>
-                <!-- 
-                </small> <small>
-                    <p>Crée le : <?php echo $comment->getCreatedAt(); ?>
+            <article class="media">
+                <figure class="media-left mt-3">
+                    <p class="image is-128x128">
+                        <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
                     </p>
-                </small> -->
-                <br>
-                <?php echo $comment->getComment(); ?>
-                </p>
-            </div>
-        </div>
-        <div class="media-right">
-            <small>
-                <p>Crée le : <?php echo $comment->getCreatedAt(); ?>
-                </p>
-            </small>
-        </div>
-    </article>
-    <?php
+                </figure>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                        <h2><?php echo $comment->getAuthor(); ?></h2>
+                        
+                        <br>
+                        <?php echo $comment->getComment(); ?>
+                        </p>
+                    </div>
+                </div>
+                <div class="media-right">
+                    <small>
+                        <p>Crée le : <?php echo date_format($comment->getCreated_at(), 'd.m.Y à H:i:s'); ?>
+                        </p>
+                    </small>
+                </div>
+            </article>
+        <?php
     }
     ?>
 </body>

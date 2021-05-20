@@ -28,9 +28,9 @@ class Comment
     /**
      * Creation Date of comment.
      *
-     * @var date
+     * @var DateTime
      */
-    private $createdAt;
+    private $created_at;
 
     //! Méthodes magiques et de construction
 
@@ -118,11 +118,11 @@ class Comment
     /**
      * Get creation Date of comment.
      *
-     * @return date
+     * @return datetime
      */
-    public function getCreatedAt()
+    public function getCreated_at()
     {
-        return $this->createdAt;
+        return $this->created_at;
     }
 
     /**
@@ -132,8 +132,8 @@ class Comment
      *
      * @return self
      */
-    public function setCreatedAt(date $createdAt)
+    public function setCreated_at(\datetime $created_at)
     {
-        $this->createdAt = $createdAt;
+        $this->created_at = $created_at;
     }
 }
