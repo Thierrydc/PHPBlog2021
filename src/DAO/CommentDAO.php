@@ -14,8 +14,6 @@ class CommentDAO extends DAO
 
     public function getAll()
     {
-        $comments = [];
-
         $sql = 'SELECT * FROM comments ORDER BY created_at DESC';
         $result = $this->createQuery($sql)->fetchAll(\PDO::FETCH_ASSOC);
 
